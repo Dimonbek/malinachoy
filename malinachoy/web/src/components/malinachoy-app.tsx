@@ -48,6 +48,7 @@ declare global {
           onClick: (cb: () => void) => void;
           offClick: (cb: () => void) => void;
         };
+        platform?: string;
       };
     };
   }
@@ -158,7 +159,7 @@ export default function MalinachoyApp() {
 
   // Check if WebApp exists safely
   const tg = typeof window !== "undefined" ? window.Telegram?.WebApp : null;
-  const isTelegram = tg && tg.platform && tg.platform !== "unknown" && tg.platform !== "";
+  const isTelegram = tg && (tg as any).platform && (tg as any).platform !== "unknown" && (tg as any).platform !== "";
 
   // Initialize Telegram WebApp on Mount
   useEffect(() => {
