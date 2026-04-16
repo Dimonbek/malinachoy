@@ -1,0 +1,26 @@
+# MALINACHOY KAFE - AI MASTER RULES & SKILLS
+Ushbu fayl sun'iy intellekt (AI) agentlari uchun loyihani boshqarishda qo'llanma hisoblanadi. Har qanday kod o'zgartirilishidan oldin ushbu qoidalarga qat'iy amal qilinishi shart.
+
+## 1. UI-UX PRO MAX (Design System Rules)
+- **Aesthetic:** Loyiha faqat "Premium Glassmorphism" va "Bento Grid" uslubida qolishi kerak.
+- **Colors:** Asosiy rang `oklch(55% 0.22 20)` (Malina Deep Red). Har qanday yangi ranglar shunga mos va kontrast bo'lishi kerak.
+- **Typography:** `Outfit` yoki `Inter` shriftlari ishlatilishi shart. Text gradientlar va `text-balance` ko'p qo'llanilishi kerak.
+- **Animations:** Har bir bosiladigan tugma (Button) yoki Card (Bento Grid) `hover:scale-105` yoki `active:scale-95` kabi micro-interaksiyalarga ega bo'lishi shart.
+- **Strict Rule:** Oq fonga qora matn yozishda contrast ratio (WCAG) kamida AA standartida bo'lishi kerak.
+
+## 2. NEXT.JS 14/15 BEST PRACTICES (Frontend Rules)
+- **Architecture:** App Router ishlatilgan. Layout va Page strukturalarini chalkashtirmang.
+- **Performance:** Rasmlar `next/image` yordamida (yoki Telegram Web App uchun to'g'ri optimizatsiyalangan `<img>` tegi bilan) ishlatilishi shart.
+- **Components:** Barcha UI komponentlar `shadcn/ui` standartlariga asoslanishi yoki Tailwind CSS ning `@apply` direktivasi orqali markazlashgan bo'lishi kerak (`globals.css`).
+
+## 3. TELEGRAM WEB APP SDK (Integration Rules)
+- **MainButton & Haptics:** Foydalanuvchi biror yirik ish qilsa (Savatga o'tish, Tasdiqlash) darhol `window.Telegram.WebApp.HapticFeedback.impactOccurred("medium")` ishlashi shart.
+- **Safeguard:** Agar WebApp obyekti topilmasa (ilova brauzerda ochilgan bo'lsa), loyiha xato bermasligi uchun har doim `try/catch` yoki `window.Telegram?.WebApp` orqali xavfsiz chaqirilmog'i shart.
+
+## 4. NODE.JS & TELEGRAF (Backend Flow Rules)
+- **Graceful Shutdown:** Bot crash (qotib qolish) bermasligi uchun doim processlar nazorat qilinadi (`process.once("SIGINT", ...)`).
+- **Formatted Logs:** Admin chatiga ketadigan ma'lumotlar estetik va o'qishga qulay (Markdown) formatda borishi kerak.
+- **Health Check:** Render yoki Railway kabi serverlar botni "uxlatib qo'ymasligi" uchun port doimiy HTTP `/health` javobini yuborishi shart.
+
+---
+AI tasdiqlashi: Men ushbu qoidalarni o'qidim va ularga amal qilaman.🚀
