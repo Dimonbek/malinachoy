@@ -66,9 +66,9 @@ bot.start((ctx) => {
         '',
         '🏪 *Malinachoy Kafe* botiga xush kelibsiz!',
         '',
-        'Sizga xizmat ko\\'rsatishimiz va buyurtmalaringizni yetkazib berishimiz uchun telefon raqamingiz kerak.',
+        `Sizga xizmat ko'rsatishimiz va buyurtmalaringizni yetkazib berishimiz uchun telefon raqamingiz kerak.`,
         '',
-        'Iltimos, pastdagi tugmani bosib raqamingizni yuboring:',
+        `Iltimos, pastdagi tugmani bosib raqamingizni yuboring:`,
     ].join('\n');
 
     ctx.reply(welcomeMsg, {
